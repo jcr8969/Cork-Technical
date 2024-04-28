@@ -5,7 +5,7 @@ namespace Cork_Technical.Data
 {
     public class ApiDbContext : DbContext
     {
-        public DbSet<Asset> Assets { get; set; }
+        public virtual DbSet<Asset> Assets { get; set; }
 
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
         {
