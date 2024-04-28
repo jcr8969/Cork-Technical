@@ -1,8 +1,28 @@
-# Cork-Technical TODO
+## Cork-Technical TODO
 
-	Update README.txt with how to set up and run this
+What would I change given extra time?
 
-	GET all cyber assets from db
-	POST a new cyber asset to db
-	GET cyber asset from db using id
-	DELETE cyber asset from db
+I would have finished Part 2 (that is attempting to provide pagination for 
+the GET assets). I would have also implemented more error handling (for example,
+the GETALL assets should return a message if the database is empty)
+
+
+What would I add to the API to make it more secure?
+
+To make the API more secure, one could add encryption to the database, rather than
+storing them in plaintext. 
+
+
+Would I continue to use the same database?
+
+I would not continue to use the same database. SQLite is very good for local systems,
+however, it would not be the best to use for large networks where multiple people need
+access to it at once over the Internet. Additionally, as stated above, I'm not sure
+about the security measures of it. There are probably other types of databases that are
+more secure.
+
+
+Could the project be more portable?
+
+Since I used the .NETT framework, it can be utilized on any Operating System (I know
+for certain it works on Windows, Linux, and MacOS). Therefore, it is already portable.
