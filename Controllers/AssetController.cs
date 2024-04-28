@@ -64,5 +64,38 @@ namespace Cork_Technical.Controllers
             return new JsonResult(Ok(result));
         }
 
+
+        // UPDATE by id
+        [HttpPost("Update")]
+        public JsonResult Post(int id,  Asset asset)
+        {
+            if (id != asset.id)
+                return new JsonResult(NotFound());
+
+            _context.Entry(asset).State = EntityState.Modified;
+            _context.SaveChanges();
+
+            return new JsonResult(Ok(asset));
+        }
+
+
+        // GET filtered by type
+        [HttpGet("FilterByType")]
+        public JsonResult Get(string type)
+        {
+            try
+            {
+                var result = _context.Assets.Where(a => a.type == type).ToList();
+
+                if (result.Count == 0)
+                    return new JsonResult(NotFound());
+
+                return new JsonResult(Ok(result));
+            }
+            catch (Exception e)
+            {
+                return new JsonResult(e.Message);
+            }
+        }
     }
 }
