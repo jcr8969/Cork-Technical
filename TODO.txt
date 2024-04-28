@@ -1,0 +1,8 @@
+# Cork-Technical TODO
+
+	Update README.txt with how to set up and run this
+
+	GET all cyber assets from db
+	POST a new cyber asset to db
+	GET cyber asset from db using id
+	DELETE cyber asset from db
