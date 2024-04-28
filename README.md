@@ -10,7 +10,7 @@ An RESTful API to manage a SQLite database of cyber assets built in C# and .NET 
 - ASP.NET 4.0
 
 ## How To Run It
-- In the directory with the project, run the Following Commands:
+- In the directory with the project, run the following commands:
 	- dotnet clear
 	- dotnet build
 	- dotnet watch
